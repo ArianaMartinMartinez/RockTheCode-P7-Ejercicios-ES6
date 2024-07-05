@@ -8,3 +8,12 @@ const streamers = [
 	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
 	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
 ];
+
+const input = document.querySelector('input');
+
+const filter = (e) => {
+	const filtered = streamers.filter(streamer => streamer.name.toLowerCase().includes(e.target.value));
+	console.log(filtered);
+}
+
+input.addEventListener('input', filter);
