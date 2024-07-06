@@ -16,7 +16,28 @@ const exams = [
     {name: 'Keanu Reeves', score: 10}
 ];
 
+const allExamsScore = exams.reduce(
+    (acc, exam) => acc + exam.score
+    , 0
+);
+
+console.log('Nota total de los examenes: ', allExamsScore);
+
 /*7.2 Dado el mismo array, haz una suma de todos las notas de los examenes de los 
 alumnos que esten aprobados usando la función .reduce().*/
+const allPassedExams = exams.reduce(
+    (acc, exam) => {
+        if(exam.score >= 5) {
+            return acc + exam.score;
+        }
+        return acc;
+    }
+    , 0
+);
+
+console.log('Nota total de los examenes aprobados: ', allPassedExams);
 
 //7.3 Dado el mismo array, haz la media de las notas de todos los examenes .reduce().
+const averageScore = exams.reduce((acc, exam) => acc + exam.score, 0) / exams.length;
+
+console.log('Media de las notas de los examenes: ', averageScore);
