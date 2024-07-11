@@ -4,10 +4,10 @@ del array sea igual al valor del texto que enviaste como parametro.
 
 Haz varios ejemplos y compruebalos.
 
-Sugerencia de función:*/
+Sugerencia de función:
 function findArrayIndex(array, text) {}
 
-//Ej array:
+Ej array:*/
 const mainCharacters = [
   "Luke",
   "Leia",
@@ -17,3 +17,11 @@ const mainCharacters = [
   "Anakin",
   "Obi-Wan",
 ];
+
+function findArrayIndex(array, text) {
+  return array.indexOf(text);
+}
+
+console.log(findArrayIndex(mainCharacters, "Anakin"));
+console.log(findArrayIndex(mainCharacters, "Luke"));
+console.log(findArrayIndex(mainCharacters, "Darth Vader"));
