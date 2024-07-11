@@ -45,3 +45,17 @@ const users = [
     },
   },
 ];
+
+const soundCount = {};
+
+for(const user of users) {
+  for(const sound in user.favoritesSounds) {
+    if(soundCount[sound]) {
+      soundCount[sound]++;
+    } else {
+      soundCount[sound] = 1;
+    }
+  }
+}
+
+console.log('Sonidos favoritos de los usuarios: ', soundCount);
