@@ -10,3 +10,13 @@ const fantasticFour = [
   "La mujer invisible",
   "La cosa",
 ];
+
+function swap(array, index1, index2) {
+  const x = array[index1];
+  array[index1] = array[index2];
+  array[index2] = x;
+
+  return array;
+}
+
+console.log(swap(fantasticFour, 1, 3));
